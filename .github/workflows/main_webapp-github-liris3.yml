@@ -1,3 +1,4 @@
+
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
@@ -24,6 +25,7 @@ jobs:
           node-version: '22.x'
 
       - name: npm install, build, and test
+       working-directory: ./helas/
         run: |
           npm install
           npm run build --if-present
@@ -62,4 +64,5 @@ jobs:
           app-name: 'webapp-github-liris3'
           slot-name: 'Production'
           package: .
+
           
